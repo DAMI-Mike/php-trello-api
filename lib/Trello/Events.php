@@ -219,6 +219,18 @@ final class Events
     const CARD_COMMENT                        = 'commentCard';
 
     /**
+     * When a comment is updated
+     * The event listener method receives a Trello\Event\CardCommentEvent instance.
+     */
+    const CARD_COMMENT_UPDATE                 = 'updateComment';
+
+    /**
+     * When a comment is updated
+     * The event listener method receives a Trello\Event\CardCommentEvent instance.
+     */
+    const CARD_COMMENT_DELETE                 = 'deleteComment';
+
+    /**
      * When a card's comment is copied
      * The event listener method receives a Trello\Event\CardCommentEvent instance.
      */
@@ -400,6 +412,7 @@ final class Events
             self::CARD_ADD_MEMBER,
             self::CARD_REMOVE_MEMBER,
             self::CARD_COMMENT,
+            self::CARD_COMMENT_UPDATE,
             self::CARD_COPY_COMMENT,
             self::CARD_FROM_CHECKITEM,
             self::CARD_ADD_ATTACHMENT,

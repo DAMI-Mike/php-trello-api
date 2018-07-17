@@ -175,10 +175,14 @@ class Service extends Manager
                 $event->setMember($this->getMember($data['member']['id']));
                 break;
             case Events::CARD_COMMENT:
+            case Events::CARD_COMMENT_UPDATE:
+            case Events::CARD_COMMENT_DELETE:
             case Events::CARD_COPY_COMMENT:
                 $event = new Event\CardCommentEvent();
                 $event->setCard($this->getCard($data['card']['id']));
+                $event->setCommentId($action['id']);
                 $event->setComment($data['text']);
+                $event->setCommentCreatorFullName($data['memberCreator']['fullName']);
                 break;
             case Events::CARD_FROM_CHECKITEM:
                 $event = new Event\CardFromCheckItemEvent();
