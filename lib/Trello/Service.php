@@ -180,7 +180,7 @@ class Service extends Manager
                 $event = new Event\CardCommentEvent();
                 $event->setCard($this->getCard($data['card']['id']));
                 $event->setCommentId($action['id']);
-                $event->setComment($action['comment']['text']);
+                $event->setComment($data['text']);
                 $event->setCommentCreatorFullName($action['memberCreator']['fullName']);
                 break;
             case Events::CARD_COMMENT_UPDATE:
