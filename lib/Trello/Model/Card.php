@@ -41,6 +41,14 @@ class Card extends AbstractObject implements CardInterface
     /**
      * {@inheritdoc}
      */
+    public function getIdMemberCreator()
+    {
+        return $this->data['idMemberCreator'];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function setName($name)
     {
         $this->data['name'] = $name;

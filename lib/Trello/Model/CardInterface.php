@@ -11,6 +11,8 @@ interface CardInterface extends ObjectInterface
      */
     public function getShortId();
 
+    public function getIdMemberCreator();
+
     /**
      * Set name
      *
