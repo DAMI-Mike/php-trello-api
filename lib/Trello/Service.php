@@ -157,7 +157,7 @@ class Service extends Manager
             case Events::CARD_UPDATE_NAME:
             case Events::CARD_UPDATE_DESC:
             case Events::CARD_UPDATE_CLOSED:
-            case Events::CARD_DELETE:
+            //case Events::CARD_DELETE:
             case Events::CARD_EMAIL:
             case Events::CARD_ADD_LABEL:
             case Events::CARD_REMOVE_LABEL:
@@ -181,7 +181,7 @@ class Service extends Manager
                 $event = new Event\CardCommentEvent();
                 $event->setCard($this->getCard($data['card']['id']));
                 $event->setCommentId($action['id']);
-                $event->setComment($data['text']);
+                $event->setComment($action['text']);
                 $event->setCommentCreatorFullName($action['memberCreator']['fullName']);
                 break;
             case Events::CARD_FROM_CHECKITEM:
